@@ -1,0 +1,4411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        height: 100vh;
+        width: 100%;
+        background-image: url(./dark-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    /* .child1{
+        height: 12vh;
+        width: 80%;
+        position: relative;
+        margin: auto;
+        top: 300px;
+        border-right: 5px solid white;
+    } */
+    .p1 {
+        font-family: Muli, sans-serif;
+        font-size: 65px;
+        font-weight: 900;
+        line-height: 84.5px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 320px;
+        left: 400px;
+        /* margin: auto; */
+        border-right: 5px solid white;
+        animation-name: move1;
+        /* animation-delay: ; */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 9s;
+        animation-direction: alternate;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @keyframes move1 {
+        0% {
+            width: 760px;
+            opacity: 1;
+        }
+
+        20% {
+            width: 0;
+            opacity: 1;
+        }
+
+        40% {
+            width: 0;
+            opacity: 0;
+        }
+
+        60% {
+            width: 0;
+            opacity: 0;
+        }
+
+        80% {
+            width: 0;
+            opacity: 0;
+        }
+
+        100% {
+            width: 0;
+            opacity: 0;
+        }
+
+
+    }
+
+    /* .child2{
+        height: 12vh;
+        width: 90%;
+        position: relative;
+        margin: auto;
+        top: -60px;
+        border-right: 5px solid white;
+    } */
+    .p3 {
+        font-family: Muli, sans-serif;
+        font-size: 65px;
+        font-weight: 900;
+        line-height: 84.5px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 320px;
+        left: 280px;
+        border-right: 5px solid white;
+        animation-name: move2;
+        /* animation-delay: ; */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 9s;
+        animation-direction: alternate;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @keyframes move2 {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+
+        20% {
+            width: 0;
+            opacity: 0;
+        }
+
+        40% {
+            width: 1020px;
+            opacity: 1;
+        }
+
+        60% {
+            width: 0;
+            opacity: 1;
+        }
+
+        80% {
+            width: 0;
+            opacity: 0;
+        }
+
+        100% {
+            width: 0;
+            opacity: 0;
+        }
+
+
+    }
+
+    .p4 {
+        font-family: Muli, sans-serif;
+        font-size: 65px;
+        font-weight: 900;
+        line-height: 84.5px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 320px;
+        left: 420px;
+        border-right: 5px solid white;
+        animation-name: move3;
+        /* animation-delay: ; */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 9s;
+        animation-direction: alternate;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @keyframes move3 {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+
+        20% {
+            width: 0;
+            opacity: 0;
+        }
+
+        40% {
+            width: 0;
+            opacity: 0;
+        }
+
+        60% {
+            width: 0;
+            opacity: 0;
+        }
+
+        80% {
+            width: 730px;
+            opacity: 1;
+        }
+
+        100% {
+            width: 0;
+            opacity: 1;
+        }
+
+
+    }
+
+    .address {
+        height: 40px;
+        width: 100%;
+        background-color: blue;
+        position: relative;
+    }
+
+    .menu {
+        height: 100px;
+        width: 100%;
+        background-color: darkblue;
+        /* border: 1px solid white; */
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+    }
+
+    #logo {
+        height: 50px;
+        width: 10%;
+        position: absolute;
+        left: 15%;
+        top: 20px;
+    }
+
+    .menubar {
+        height: 60px;
+        width: 40%;
+        /* border: 1px solid white; */
+        position: absolute;
+        top: 20px;
+        left: 50%;
+    }
+
+    .sett {
+        /* margin-top: -5px; */
+        color: white;
+        margin-left: 10px;
+        /* border: solid 1px orange; */
+        height: 40px;
+        /* width: max-content; */
+        
+        /* display: inline-block; */
+    }
+
+    .elements {
+        list-style: none;
+        font-size: large;
+        height: 70px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: inline-block;
+        margin: 12px;
+        cursor: pointer;
+        position: relative;
+        /* background-color: red; */
+        /* border: solid 1px black; */
+    }
+
+    .p_1 {
+        position: absolute;
+        left: 120px;
+        top: 8px;
+        color: white;
+        font-size: large;
+
+    }
+
+    .p_2 {
+        position: absolute;
+        left: 400px;
+        top: 8px;
+        color: white;
+        font-size: large;
+    }
+
+    .p_3 {
+        position: absolute;
+        left: 650px;
+        top: 8px;
+        color: white;
+        font-size: large;
+    }
+
+    .h1 {
+        position: absolute;
+        left: 590px;
+        top: 250px;
+        color: white;
+    }
+
+    .about {
+        height: 50px;
+        width: 140px;
+        background-color: blue;
+        border-radius: 5px;
+        position: absolute;
+        left: 600px;
+        top: 520px;
+        border: none;
+        color: white;
+        font-size: medium;
+        cursor: pointer;
+        font-weight: 600;
+        transition: .5s;
+    }
+
+    .about:hover {
+        background-color: white;
+        color: blue;
+    }
+
+    .how {
+        height: 50px;
+        width: 140px;
+        background-color: blue;
+        border-radius: 5px;
+        position: absolute;
+        left: 800px;
+        top: 520px;
+        border: none;
+        color: white;
+        font-size: medium;
+        cursor: pointer;
+        font-weight: 600;
+        transition: .5s;
+    }
+
+    .how:hover {
+        background-color: white;
+        color: blue;
+    }
+
+    .p5 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 480px;
+        top: 420px;
+        text-align: center;
+    }
+
+    .main1 {
+        height: 140vh;
+        width: 100%;
+        background-color: rgb(11, 14, 60);
+        position: relative;
+    }
+
+    .child1 {
+        height: 450px;
+        width: 350px;
+        background-color: rgb(0, 0, 54);
+        /* border: 1px solid white; */
+        border-radius: 5px;
+        position: relative;
+        text-align: center;
+        left: 200px;
+        top: -80px;
+        transition: .7s;
+    }
+
+    .child1:hover {
+        background-color: royalblue;
+        /* padding: 2px 2px; */
+    }
+
+    .circle1 {
+        height: 140px;
+        width: 140px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 110px;
+        top: 40px;
+    }
+
+    .p6 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 65px;
+        top: 200px;
+    }
+
+    .p7 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 40px;
+        top: 240px;
+        text-align: center;
+    }
+
+    .p8 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 120px;
+        top: 350px;
+        cursor: pointer;
+    }
+
+    .child2 {
+        height: 450px;
+        width: 350px;
+        background-color: rgb(0, 0, 54);
+        /* border: 1px solid white; */
+        border-radius: 5px;
+        position: relative;
+        text-align: center;
+        left: 600px;
+        top: -530px;
+        transition: .7s;
+    }
+
+    .child2:hover {
+        background-color: royalblue;
+        /* padding: 2px 2px; */
+    }
+
+    .circle2 {
+        height: 140px;
+        width: 140px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 110px;
+        top: 40px;
+    }
+
+    .p9 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 85px;
+        top: 200px;
+    }
+
+    .p10 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 40px;
+        top: 240px;
+        text-align: center;
+    }
+
+    .p11 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 120px;
+        top: 350px;
+        cursor: pointer;
+    }
+
+    .child3 {
+        height: 450px;
+        width: 350px;
+        background-color: rgb(0, 0, 54);
+        /* border: 1px solid white; */
+        border-radius: 5px;
+        position: relative;
+        text-align: center;
+        left: 1000px;
+        top: -980px;
+        transition: .7s;
+    }
+
+    .child3:hover {
+        background-color: royalblue;
+        /* padding: 2px 2px; */
+    }
+
+    .circle3 {
+        height: 140px;
+        width: 140px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 110px;
+        top: 40px;
+    }
+
+    .p12 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 75px;
+        top: 200px;
+    }
+
+    .p13 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 40px;
+        top: 240px;
+        text-align: center;
+    }
+
+    .p14 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 120px;
+        top: 350px;
+        cursor: pointer;
+    }
+
+    #image1 {
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        left: 100px;
+        top: 650px;
+        animation: 2s img1 alternate linear infinite;
+    }
+
+    @keyframes img1 {
+        from {
+            margin-top: 0;
+        }
+
+        to {
+            margin-top: -30px;
+        }
+    }
+
+    #image2 {
+        height: 450px;
+        width: 500px;
+        position: absolute;
+        left: 200px;
+        top: 500px;
+        z-index: 1;
+    }
+
+    .text {
+        height: 550px;
+        width: 750px;
+        /* border: 1px solid white; */
+        position: relative;
+        left: 750px;
+        top: -850px;
+    }
+
+    .p15 {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20.8px;
+        color: rgb(255, 255, 255);
+        letter-spacing: 7px;
+    }
+
+    .p16 {
+        font-family: Muli, sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 36px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 50px;
+    }
+
+    .solo {
+        color: blue;
+    }
+
+    .lin {
+        height: 10px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 20px;
+        top: 150px;
+        border-radius: 50px;
+    }
+
+    .cir {
+        height: 12px;
+        width: 12px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -1.5px;
+        animation: cir 3s linear infinite;
+    }
+
+    @keyframes cir {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+
+    .p17 {
+        font-family: Muli, sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgba(255, 255, 255, 0.92);
+        position: absolute;
+        left: 20px;
+        top: 190px;
+    }
+
+    .p18 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 80px;
+        top: 270px;
+    }
+
+    .p19 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 80px;
+        top: 310px;
+    }
+
+    .p20 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 80px;
+        top: 385px;
+    }
+
+    .p21 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 80px;
+        top: 425px;
+    }
+
+    .main2 {
+        height: 140vh;
+        width: 100%;
+        background-color: rgb(0, 0, 54);
+        position: relative;
+    }
+
+    .p23 {
+        position: absolute;
+        left: 600px;
+        top: 30px;
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20.8px;
+        color: rgb(255, 255, 255);
+        letter-spacing: 7px;
+    }
+
+    .p24 {
+        font-family: Muli, sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 36px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 450px;
+        top: 60px;
+        text-align: center;
+    }
+
+    .line {
+        height: 10px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 650px;
+        top: 150px;
+        border-radius: 50px;
+    }
+
+    .cir1 {
+        height: 12px;
+        width: 12px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -1px;
+        animation: cir1 3s linear infinite;
+    }
+
+    @keyframes cir1 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+
+    .child4 {
+        height: 330px;
+        width: 380px;
+        border: 1px solid gray;
+        position: relative;
+        left: 150px;
+        top: 210px;
+        transition: .7s;
+        border-radius: 5px;
+    }
+
+    .p25 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 110px;
+    }
+
+    .p26 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 160px;
+    }
+
+    .p27 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 270px;
+        cursor: pointer;
+    }
+
+    .child4:hover {
+        background-color: royalblue;
+    }
+
+    .child5 {
+        height: 330px;
+        width: 380px;
+        border: 1px solid gray;
+        position: relative;
+        left: 570px;
+        top: -120px;
+        transition: .7s;
+        border-radius: 5px;
+    }
+
+    .p28 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 110px;
+    }
+
+    .p29 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 160px;
+    }
+
+    .p30 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 270px;
+        cursor: pointer;
+    }
+
+    .child5:hover {
+        background-color: royalblue;
+    }
+
+    .child6 {
+        height: 330px;
+        width: 380px;
+        border: 1px solid gray;
+        position: relative;
+        left: 990px;
+        top: -450px;
+        transition: .7s;
+        border-radius: 5px;
+    }
+
+    .p31 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 110px;
+    }
+
+    .p32 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 160px;
+    }
+
+    .p33 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 270px;
+        cursor: pointer;
+    }
+
+    .child6:hover {
+        background-color: royalblue;
+    }
+
+    .child7 {
+        height: 330px;
+        width: 380px;
+        border: 1px solid gray;
+        position: relative;
+        left: 150px;
+        top: -410px;
+        transition: .7s;
+        border-radius: 5px;
+    }
+
+    .p34 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 110px;
+    }
+
+    .p35 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 160px;
+    }
+
+    .p36 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 270px;
+        cursor: pointer;
+    }
+
+    .child7:hover {
+        background-color: royalblue;
+    }
+
+    .child8 {
+        height: 330px;
+        width: 380px;
+        border: 1px solid gray;
+        position: relative;
+        left: 570px;
+        top: -740px;
+        border-radius: 5px;
+        transition: .7s;
+    }
+
+    .p37 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 110px;
+    }
+
+    .p38 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 160px;
+    }
+
+    .p39 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 270px;
+        cursor: pointer;
+    }
+
+    .child8:hover {
+        background-color: royalblue;
+    }
+
+    .child9 {
+        height: 330px;
+        width: 380px;
+        border: 1px solid gray;
+        position: relative;
+        left: 990px;
+        top: -1070px;
+        transition: .7s;
+        border-radius: 5px;
+    }
+
+    .p40 {
+        font-family: Muli, sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 110px;
+    }
+
+    .p41 {
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 160px;
+    }
+
+    .p42 {
+        font-family: Muli, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 270px;
+        cursor: pointer;
+    }
+
+    .child9:hover {
+        background-color: royalblue;
+    }
+
+    .long {
+        height: 150px;
+        width: 80%;
+        background-color: rgb(12, 90, 219);
+        border-radius: 20px;
+        position: relative;
+        left: 10%;
+        top: -95%;
+        z-index: 1;
+    }
+
+    .main3 {
+        height: 120vh;
+        width: 100%;
+        background-color: rgb(11, 14, 60);
+        position: relative;
+    }
+
+    .p43 {
+        font-family: Muli, sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 52px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 70px;
+        top: 20px;
+    }
+
+    .p44 {
+        font-family: Muli, sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 42px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 20px;
+        top: 80px;
+    }
+
+    .line1 {
+        height: 90px;
+        width: 2px;
+        background-color: silver;
+        position: absolute;
+        left: 260px;
+        top: 30px;
+    }
+
+    .p45 {
+        font-family: Muli, sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 52px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 360px;
+        top: 20px;
+    }
+
+    .p46 {
+        font-family: Muli, sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 42px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 290px;
+        top: 80px;
+    }
+
+    .line2 {
+        height: 90px;
+        width: 2px;
+        background-color: silver;
+        position: absolute;
+        left: 600px;
+        top: 30px;
+    }
+
+    .p47 {
+        font-family: Muli, sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 52px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 700px;
+        top: 20px;
+    }
+
+    .p48 {
+        font-family: Muli, sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 42px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 630px;
+        top: 80px;
+    }
+
+    .line3 {
+        height: 90px;
+        width: 2px;
+        background-color: silver;
+        position: absolute;
+        left: 930px;
+        top: 30px;
+    }
+
+    .p49 {
+        font-family: Muli, sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 52px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 1000px;
+        top: 20px;
+
+    }
+
+    .p50 {
+        font-family: Muli, sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 42px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 960px;
+        top: 80px;
+    }
+
+    .p51 {
+        position: absolute;
+        left: 170px;
+        top: 200px;
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20.8px;
+        color: rgb(255, 255, 255);
+        letter-spacing: 5px;
+    }
+
+    .p52 {
+        font-family: Muli, sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 36px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 170px;
+        top: 230px;
+
+    }
+
+    .lin1 {
+        height: 10px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 170px;
+        top: 320px;
+        border-radius: 50px;
+    }
+
+    .cir2 {
+        height: 12px;
+        width: 12px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -1px;
+        animation: cir2 3s linear infinite;
+    }
+
+    @keyframes cir2 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+
+    .join {
+        height: 50px;
+        width: 150px;
+        background-color: #1640c0;
+        border: none;
+        border-radius: 5px;
+        font-size: medium;
+        color: white;
+        position: absolute;
+        left: 1200px;
+        top: 270px;
+    }
+
+    .join:hover {
+        background-color: darkblue;
+    }
+
+    #image7 {
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        left: 10px;
+        top: 500px;
+        animation: 2s img2 alternate linear infinite;
+    }
+
+    @keyframes img2 {
+        from {
+            margin-top: 0;
+        }
+
+        to {
+            margin-top: -30px;
+        }
+    }
+
+    .child10 {
+        height: 400px;
+        width: 260px;
+        /* border: 1px solid white; */
+        box-shadow: 0px 2px 10px rgba(180, 173, 173, 0.468);
+        position: relative;
+        left: 170px;
+        top: 400px;
+        overflow: hidden;
+        border-radius: 5px;
+        border-bottom: 3px solid blue;
+    }
+
+    .child10:hover .chil {
+        opacity: 1;
+    }
+
+    .child10:hover .chi {
+        left: 210px;
+    }
+
+    .child {
+        height: 300px;
+        width: 100%;
+        /* border: 1px solid red; */
+        position: absolute;
+    }
+
+    #image3 {
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        border-radius: 5px;
+
+    }
+
+    .chil {
+        height: 300px;
+        width: 100%;
+        background-color: rgba(0, 0, 255, 0.374);
+        position: absolute;
+        opacity: 0;
+        transition: .7s;
+    }
+
+    .chi {
+        height: 200px;
+        width: 50px;
+        background-color: white;
+        position: absolute;
+        left: 260px;
+        top: 50px;
+        transition: .7s;
+    }
+
+    .ch {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(0, 0, 54);
+        position: absolute;
+        top: 300px;
+    }
+
+    .p53 {
+        font-family: Muli, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: white;
+        position: absolute;
+        left: 85px;
+        top: 20px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .p53:hover {
+        color: blue;
+    }
+
+    .p54 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 130px;
+        top: 60px;
+    }
+
+    .child11 {
+        height: 400px;
+        width: 260px;
+        /* border: 1px solid white; */
+        box-shadow: 0px 2px 10px rgba(180, 173, 173, 0.468);
+        position: relative;
+        left: 470px;
+        /* top: -500px; */
+        overflow: hidden;
+        border-radius: 5px;
+        border-bottom: 1px solid blue;
+    }
+
+    .child111 {
+        height: 300px;
+        width: 100%;
+        /* border: 1px solid red; */
+        position: absolute;
+    }
+
+    #image4 {
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        border-radius: 5px;
+
+    }
+
+    .chil1 {
+        height: 300px;
+        width: 100%;
+        background-color: rgba(0, 0, 255, 0.374);
+        position: absolute;
+        opacity: 0;
+        transition: .7s;
+    }
+
+    .child11:hover .chil1 {
+        opacity: 1;
+    }
+
+    .chi1 {
+        height: 200px;
+        width: 50px;
+        background-color: white;
+        position: absolute;
+        left: 260px;
+        top: 50px;
+        transition: .7s;
+    }
+
+    .child11:hover .chi1 {
+        left: 210px;
+    }
+
+    .ch1 {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(0, 0, 54);
+        position: absolute;
+        top: 300px;
+    }
+
+    .p55 {
+        font-family: Muli, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: white;
+        position: absolute;
+        left: 85px;
+        top: 20px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .p55:hover {
+        color: blue;
+    }
+
+    .p56 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 110px;
+        top: 60px;
+    }
+
+    .child12 {
+        height: 400px;
+        width: 260px;
+        /* border: 1px solid white; */
+        box-shadow: 0px 2px 10px rgba(180, 173, 173, 0.468);
+        position: relative;
+        left: 780px;
+        top: -400px;
+        overflow: hidden;
+        border-radius: 5px;
+        border-bottom: 1px solid blue;
+    }
+
+    .child222 {
+        height: 300px;
+        width: 100%;
+        /* border: 1px solid red; */
+        position: absolute;
+    }
+
+    #image5 {
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        border-radius: 5px;
+
+    }
+
+    .chil2 {
+        height: 300px;
+        width: 100%;
+        background-color: rgba(0, 0, 255, 0.374);
+        position: absolute;
+        opacity: 0;
+        transition: .7s;
+    }
+
+    .child12:hover .chil2 {
+        opacity: 1;
+    }
+
+    .chi2 {
+        height: 200px;
+        width: 50px;
+        background-color: white;
+        position: absolute;
+        left: 260px;
+        top: 50px;
+        transition: .7s;
+    }
+
+    .child12:hover .chi2 {
+        left: 210px;
+    }
+
+    .ch2 {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(0, 0, 54);
+        position: absolute;
+        top: 300px;
+    }
+
+    .p57 {
+        font-family: Muli, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: white;
+        position: absolute;
+        left: 85px;
+        top: 20px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .p57:hover {
+        color: blue;
+    }
+
+    .p58 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 115px;
+        top: 60px;
+    }
+
+    .child13 {
+        height: 400px;
+        width: 260px;
+        /* border: 1px solid white; */
+        position: relative;
+        left: 1090px;
+        top: -800px;
+        overflow: hidden;
+        border-radius: 5px;
+        border-bottom: 1px solid blue;
+    }
+
+    .child333 {
+        height: 300px;
+        width: 100%;
+        /* border: 1px solid red; */
+        position: absolute;
+    }
+
+    #image6 {
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        border-radius: 5px;
+
+    }
+
+    .chil3 {
+        height: 300px;
+        width: 100%;
+        background-color: rgba(0, 0, 255, 0.374);
+        position: absolute;
+        opacity: 0;
+        transition: .7s;
+    }
+
+    .child13:hover .chil3 {
+        opacity: 1;
+    }
+
+    .chi3 {
+        height: 200px;
+        width: 50px;
+        background-color: white;
+        position: absolute;
+        left: 260px;
+        top: 50px;
+        transition: .7s;
+    }
+
+    .child13:hover .chi3 {
+        left: 210px;
+    }
+
+    .ch3 {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(0, 0, 54);
+        position: absolute;
+        top: 300px;
+    }
+
+    .p59 {
+        font-family: Muli, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: white;
+        position: absolute;
+        left: 85px;
+        top: 20px;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .p59:hover {
+        color: blue;
+    }
+
+    .p60 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 115px;
+        top: 60px;
+    }
+
+    .main4 {
+        height: 120vh;
+        width: 100%;
+        background-color: rgb(0, 0, 54);
+        position: relative;
+    }
+
+    .p61 {
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: blue;
+        position: absolute;
+        left: 600px;
+        top: 50px;
+        letter-spacing: 5px;
+    }
+
+    .p62 {
+        font-family: Muli, sans-serif;
+        font-size: 29px;
+        font-weight: 700;
+        line-height: 29px;
+        color: white;
+        position: absolute;
+        left: 560px;
+        top: 90px;
+        /* letter-spacing: 5px; */
+    }
+
+    .lin2 {
+        height: 10px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 670px;
+        top: 150px;
+        border-radius: 50px;
+    }
+
+    .cir3 {
+        height: 12px;
+        width: 12px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -1px;
+        animation: cir3 3s linear infinite;
+    }
+
+    @keyframes cir3 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+
+    .dropdown1{
+        height: 470px;
+        width: 300px;
+        background-color: white;
+        position: absolute;
+        top: 150px;
+        visibility: hidden;
+        transition: .5s linear;
+        color: black;
+        overflow: hidden;
+    }
+    .elements:hover .dropdown1{
+        top: 65px;
+        visibility: visible;
+    }
+    .c1{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+    }
+    .l1{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c1:hover .l1{
+        left: 10px;
+    }
+    .e1{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c1:hover .e1{
+        color: blue;
+        left: 40px;
+    }
+    .c2{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 25px;
+    }
+    .c2 .inner_c2{
+        width: 100%;
+        height: 35px;
+        overflow: hidden;
+        /* background-color: red; */
+        position: relative;
+        transition: .5s;
+    }
+    .l2{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c2:hover .l2{
+        left: 10px;
+    }
+    .e2{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c2:hover .e2{
+        color: blue;
+        left: 40px;
+    }
+    .part1{
+        height: 120px;
+        width: 200px;
+        border-radius: 5px;
+        /* border: 2px solid yellow; */
+        position: absolute;
+        left: 300px;
+        /* top: 0; */
+        opacity: 0;
+        background-color: white;
+        /* overflow: hidden; */
+        transition: .5s;
+    }
+    .c2:hover .part1{
+        /* left: 300px; */
+        opacity: 1;
+        top: -5px;
+        /* background-color: red; */
+    }
+    .c3{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 50px;
+    }
+    .l3{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c3:hover .l3{
+        left: 10px;
+    }
+    .e3{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c3:hover .e3{
+        color: blue;
+        left: 40px;
+    }
+    .c4{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 75px;
+    }
+    .l4{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c4:hover .l4{
+        left: 10px;
+    }
+    .e4{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c4:hover .e4{
+        color: blue;
+        left: 40px;
+    }
+    .c5{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 100px;
+    }
+    .l5{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c5:hover .l5{
+        left: 10px;
+    }
+    .e5{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c5:hover .e5{
+        color: blue;
+        left: 40px;
+    }
+    .c6{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 125px;
+    }
+    .l6{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c6:hover .l6{
+        left: 10px;
+    }
+    .e6{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c6:hover .e6{
+        color: blue;
+        left: 40px;
+    }
+    .c7{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 150px;
+    }
+    .l7{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c7:hover .l7{
+        left: 10px;
+    }
+    .e7{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c7:hover .e7{
+        color: blue;
+        left: 40px;
+    }
+    .c8{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 175px;
+    }
+    .l8{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c8:hover .l8{
+        left: 10px;
+    }
+    .e8{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c8:hover .e8{
+        color: blue;
+        left: 40px;
+    }
+    .c9{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 200px;
+    }
+    .l9{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c9:hover .l9{
+        left: 10px;
+    }
+    .e9{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c9:hover .e9{
+        color: blue;
+        left: 40px;
+    }
+    .c10{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 225px;
+    }
+    .l10{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c10:hover .l10{
+        left: 10px;
+    }
+    .e10{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c10:hover .e10{
+        color: blue;
+        left: 40px;
+    }
+    .c11{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 250px;
+    }
+    .l11{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c11:hover .l11{
+        left: 10px;
+    }
+    .e11{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c11:hover .e11{
+        color: blue;
+        left: 40px;
+    }
+    .c12{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 275px;
+    }
+    .l12{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c12:hover .l12{
+        left: 10px;
+    }
+    .e12{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c12:hover .e12{
+        color: blue;
+        left: 40px;
+    }
+    .c13{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 300px;
+    }
+    .l13{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c13:hover .l13{
+        left: 10px;
+    }
+    .e13{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c13:hover .e13{
+        color: blue;
+        left: 40px;
+    }
+    .c14{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 325px;
+    }
+    .l14{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c14:hover .l14{
+        left: 10px;
+    }
+    .e14{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c14:hover .e14{
+        color: blue;
+        left: 40px;
+    }
+    .c15{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 350px;
+    }
+    .l15{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c15:hover .l15{
+        left: 10px;
+    }
+    .e15{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c15:hover .e15{
+        color: blue;
+        left: 40px;
+    }
+    .c16{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 375px;
+    }
+    .l16{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c16:hover .l16{
+        left: 10px;
+    }
+    .e16{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c16:hover .e16{
+        color: blue;
+        left: 40px;
+    }
+    .c17{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 400px;
+    }
+    .l17{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c17:hover .l17{
+        left: 10px;
+    }
+    .e17{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c17:hover .e17{
+        color: blue;
+        left: 40px;
+    }
+    .c18{
+        height: max-content;
+        width: 100%;
+        /* border: 1px solid; */
+        position: absolute;
+        top: 425px;
+    }
+    .l18{
+        height: 1px;
+        width: 20px;
+        background-color: blue;
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        transition: .7s;
+    }
+    .c18:hover .l18{
+        left: 10px;
+    }
+    .e18{
+        color: rgb(40, 38, 38);
+        font-size: 16px;
+        font-weight: 450;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        transition: .7s;
+    }
+    .c18:hover .e18{
+        color: blue;
+        left: 40px;
+    }
+    .ib1{
+        height: 500px;
+        width: 380px;
+        background-image: url(./case7.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 250px;
+        overflow: hidden;
+        
+    }
+    .b1{
+        height: 500px;
+        width: 380px;
+        background-color: rgba(0, 0, 255, 0.418);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .ib1:hover .b1{
+        opacity: 1;
+    }
+    .div1{
+        height: 100px;
+        width: 200px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top: 500px;
+        left: 120px;
+        transition: .5s;
+        color: blue;
+    }
+    .ib1:hover .div1{
+        top: 220px;
+    }
+    .ib2{
+        height: 500px;
+        width: 380px;
+        background-image: url(./case3.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 250px;
+        left: 380px;
+        /* opacity: 0; */
+    }
+    .b2{
+        height: 500px;
+        width: 380px;
+        background-color: rgba(0, 0, 255, 0.418);
+        position: absolute;
+        opacity: 0;
+        transition: .5s;
+
+    }
+    .ib2:hover .b2{
+        opacity: 1;
+    }
+    .div2{
+        height: 100px;
+        width: 200px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top: 500px;
+        left: 120px;
+        transition: .5s;
+        color: blue;
+    }
+    .ib2:hover .div2{
+        top: 220px;
+    }
+    .ib3{
+        height: 500px;
+        width: 380px;
+        background-image: url(./case5.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 250px;
+        left: 760px;
+        /* opacity: 0; */
+        overflow: hidden;
+    }
+    .b3{
+        height: 500px;
+        width: 380px;
+        background-color: rgba(0, 0, 255, 0.418);
+        position: absolute;
+        opacity: 0;
+        transition: .5s;
+    }
+    .ib3:hover .b3{
+        opacity: 1;
+    }
+    .div3{
+        height: 100px;
+        width: 200px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top: 500px;
+        left: 120px;
+        transition: .5s;
+        color: blue;
+    }
+    .ib3:hover .div3{
+        top: 220px;
+    }
+    .ib4{
+        height: 500px;
+        width: 380px;
+        background-image: url(./case4.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 250px;
+        left: 1140px;
+        /* opacity: 0; */
+    }
+    .b4{
+        height: 500px;
+        width: 380px;
+        background-color: rgba(0, 0, 255, 0.418);
+        position: absolute;
+        opacity: 0;
+        transition: .5s;
+    }
+    .ib4:hover .b4{
+        opacity: 1;
+    }
+    .div4{
+        height: 100px;
+        width: 200px;
+        background-color: white;
+        border-radius: 5px;
+        position: absolute;
+        top: 500px;
+        left: 120px;
+        transition: .5s;
+        color: blue;
+    }
+    .ib4:hover .div4{
+        top: 220px;
+    }
+    .main5{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(11, 14, 60);
+        position: relative;
+
+    }
+    .p64{
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 690px;
+        top: 50px;
+        letter-spacing: 5px;
+    }
+    .p65{
+        font-family: Muli, sans-serif;
+        font-size: 29px;
+        font-weight: 700;
+        line-height: 29px;
+        color: white;
+        position: absolute;
+        left: 600px;
+        top: 90px;
+    }
+    .lin3 {
+        height: 10px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 690px;
+        top: 150px;
+        border-radius: 50px;
+    }
+
+    .cir4 {
+        height: 12px;
+        width: 12px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -1px;
+        animation: cir4 3s linear infinite;
+    }
+
+    @keyframes cir4 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+    .ccchhh{
+        height: 300px;
+        width: 350px;
+        /* border: 1px solid white; */
+        position: relative;
+        left: 100px;
+        top: 210px;
+    }
+    .circle_1{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(11,29,92);
+        position: absolute;
+        left: 120px;
+        top: 20px;
+        border-radius: 50%;
+        transition: .3s;
+    }
+    .ccchhh:hover .circle_1{
+        height: 110px;
+        width: 110px;
+        left: 125;
+        top: 25;
+
+        /* border-radius: 50%; */
+    }
+
+    .circle_11{
+        height: 80px;
+        width: 80px;
+        background-color: rgb(11,54,143);
+        position: absolute;
+        border-radius: 50%;
+        left: 10px;
+        top: 10px;
+        transition: .3s;
+    }
+    .ccchhh:hover .circle_11{
+        height: 85px;
+        width: 85px;
+        left: 13px;
+        top: 13px;
+        /* border-radius: 50%; */
+
+    } 
+    .circle_111{
+        height: 60px;
+        width: 60px;
+        background-color: rgb(12,90,219);
+        position: absolute;
+        border-radius: 50%;
+        left: 10px;
+        top: 10px;
+        transition: .3s;
+    }
+    .ccchhh:hover .circle_111{
+        height: 63px;
+        width: 63px;
+        left: 12px;
+        top: 12px;
+        /* border-radius: 50%; */
+
+    } 
+    .p66{
+        position: absolute;
+        left: 25px;
+        top: 20px;
+        color: white;
+        font-size: 20px;
+    }
+   
+    .p67{
+        font-family: Muli, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 86px;
+        top: 150px;
+    }
+    .p68{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 25px;
+        top: 190px;
+        text-align: center;
+    }
+    .ccchhh1{
+        height: 300px;
+        width: 350px;
+        /* border: 1px solid white; */
+        position: relative;
+        left: 600px;
+        top: -90px;
+    }
+    .circle_2{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(11,29,92);
+        position: absolute;
+        left: 115px;
+        top: 20px;
+        border-radius: 50%;
+        transition: .3s;
+    }
+    .ccchhh1:hover .circle_2{
+        height: 110px;
+        width: 110px;
+        left: 125;
+        top: 25;
+    }
+    .circle_22{
+        height: 80px;
+        width: 80px;
+        background-color: rgb(11,54,143);
+        position: absolute;
+        border-radius: 50%;
+        left: 10px;
+        top: 10px;
+        transition: .3s;
+    }
+    .ccchhh1:hover .circle_22{
+        height: 85px;
+        width: 85px;
+        left: 13px;
+        top: 13px;
+    }
+    .circle_222{
+        height: 60px;
+        width: 60px;
+        background-color: rgb(12,90,219);
+        position: absolute;
+        border-radius: 50%;
+        left: 10px;
+        top: 10px;
+        transition: .3s;
+    }
+    .ccchhh1:hover .circle_222{
+        height: 63px;
+        width: 63px;
+        left: 12px;
+        top: 12px;
+    }
+    .p69{
+        position: absolute;
+        left: 25px;
+        top: 20px;
+        color: white;
+        font-size: 20px;
+    }
+   
+    .p70{
+        font-family: Muli, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 85px;
+        top: 150px;
+    }
+    .p71{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 25px;
+        top: 190px;
+        text-align: center;
+    }
+    .ccchhh2{
+        height: 300px;
+        width: 350px;
+        /* border: 1px solid white; */
+        position: relative;
+        left: 1100px;
+        top: -390px;
+    }
+    .circle_3{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(11,29,92);
+        position: absolute;
+        left: 115px;
+        top: 20px;
+        border-radius: 50%;
+        transition: .3s;
+    }
+    .ccchhh2:hover .circle_3{
+        height: 110px;
+        width: 110px;
+        left: 125;
+        top: 25;
+    }
+    .circle_33{
+        height: 80px;
+        width: 80px;
+        background-color: rgb(11,54,143);
+        position: absolute;
+        border-radius: 50%;
+        left: 10px;
+        top: 10px;
+        transition: .3s;
+    }
+    .ccchhh2:hover .circle_33{
+        height: 85px;
+        width: 85px;
+        left: 13px;
+        top: 13px;
+    }
+    .circle_333{
+        height: 60px;
+        width: 60px;
+        background-color: rgb(12,90,219);
+        position: absolute;
+        border-radius: 50%;
+        left: 10px;
+        top: 10px;
+        transition: .3s;
+    }
+    .ccchhh2:hover .circle_333{
+        height: 63px;
+        width: 63px;
+        left: 12px;
+        top: 12px;
+    }
+    .p72{
+        position: absolute;
+        left: 25px;
+        top: 20px;
+        color: white;
+        font-size: 20px;
+    }
+   
+    .p73{
+        font-family: Muli, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 90px;
+        top: 150px;
+    }
+    .p74{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 25px;
+        top: 190px;
+        text-align: center;
+    }
+    .dots{
+        color: blue;
+        font-size: 16px;
+        position: absolute;
+        left: 375px;
+        top: 270px;
+        letter-spacing: 7px;
+    }
+    .dots1{
+        color: blue;
+        font-size: 16px;
+        position: absolute;
+        left: 875px;
+        top: 270px;
+        letter-spacing: 7px;
+    }
+    .main6{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(0,0,54);
+        position: relative;
+    }
+    .p75{
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 690px;
+        top: 50px;
+        letter-spacing: 5px;
+    }
+    .p76{
+        font-family: Muli, sans-serif;
+        font-size: 29px;
+        font-weight: 700;
+        line-height: 39px;
+        color: white;
+        position: absolute;
+        left: 650px;
+        top: 90px;
+        text-align: center;
+    }
+    .lin4 {
+        height: 10px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 720px;
+        top: 190px;
+        border-radius: 50px;
+    }
+
+    .cir5 {
+        height: 12px;
+        width: 12px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -1px;
+        animation: cir5 3s linear infinite;
+    }
+
+    @keyframes cir5 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+    .clip1{
+        height: 210px;
+        width: 320px;
+        background-color: rgb(21, 21, 130);
+        position: relative;
+        left: 150px;
+        top: 280px;
+        border-radius: 5px;
+    }
+    .p77{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 33px;
+        top: 40px;
+        text-align: center;
+    }
+    .clip2{
+        height: 210px;
+        width: 320px;
+        background-color: rgb(21, 21, 130);
+        position: relative;
+        left: 620px;
+        top: 70px;
+        border-radius: 5px;
+    }
+    .p78{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 33px;
+        top: 40px;
+        text-align: center;
+    }
+    .clip3{
+        height: 210px;
+        width: 320px;
+        background-color: rgb(21, 21, 130);
+        position: relative;
+        left: 1080px;
+        top: -140px;
+        border-radius: 5px;
+    }
+    .p79{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 33px;
+        top: 40px;
+        text-align: center;
+    }
+    .logo1{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        left: 150px;
+        top: -80px;
+    }
+    #image8{
+        height: 100px;
+        width: 100;
+        border-radius: 50%;
+        position: absolute;
+        /* left: 5px; */
+        /* top: 5px; */
+    }
+    .p80{
+        font-family: Muli, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: white;
+        position: absolute;
+        left: 300px;
+        top: 560px;
+    }
+    .p81{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 300px;
+        top: 600px;
+    }
+    #image9{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        position: absolute;
+        left: 620px;
+        top: 550px;
+    }
+    .p82{
+        font-family: Muli, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: white;
+        position: absolute;
+        left: 760px;
+        top: 560px;
+    }
+    .p83{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 760px;
+        top: 600px;
+    }
+    #image10{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        position: absolute;
+        left: 1080px;
+        top: 550px;
+    }
+    .p84{
+        font-family: Muli, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        color: white;
+        position: absolute;
+        left: 1220px;
+        top: 550px;
+    }
+    .p85{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 1220px;
+        top: 600px;
+    }
+    .main7{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(11,14,60);
+        position: relative;
+
+    }
+    #image11{
+        height: 80vh;
+        width: 37%;
+        position: absolute;
+        left: 10%;
+        top: 10vh;
+    }
+    .text1{
+        height: 80vh;
+        width: 40%;
+        left: 50%;
+        top: 10vh;
+        position: relative;
+        /* border: 1px solid white; */
+
+    }
+    .p86{
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: white;
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        letter-spacing: 5px;
+    }
+    .p87{
+        font-family: Muli, sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 36px;
+        color: white;
+        position: absolute;
+        left: 20px;
+        top: 80px;
+        
+    }
+    .lin5 {
+        height: 10px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 20px;
+        top: 180px;
+        border-radius: 50px;
+    }
+
+    .cir6 {
+        height: 12px;
+        width: 12px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -1px;
+        animation: cir6 3s linear infinite;
+    }
+
+    @keyframes cir6 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+    .p88{
+        font-family: Muli, sans-serif;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 28.5px;
+        color: white;
+        position: absolute;
+        top: 220px;
+        left: 20px;
+    }
+    .p89{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: 330px;
+        left: 20px;
+    }
+    .liine1{
+        height: 5px;
+        width: 450px;
+        background-color: whitesmoke;
+        position: absolute;
+        left: 20px;
+        top: 370px;
+    }
+    .in_line1{
+        height: 5px;
+        width: 370px;
+        background-color: rgb(12,90,219);
+        position: absolute;
+        animation: in 2s forwards;
+    }
+    @keyframes in {
+        from{
+            width: 200px;
+        }
+        to{
+            width: 400px;
+        }
+    }
+    .p90{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: -20px;
+        left: 200px;
+        animation: in 2s forwards;
+    }
+    @keyframes in {
+        from{
+            width: 200px;
+        }
+        to{
+            width: 370px;
+        }
+    }
+    .p91{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: 410px;
+        left: 20px;
+    }
+    .liine2{
+        height: 5px;
+        width: 450px;
+        background-color: whitesmoke;
+        position: absolute;
+        left: 20px;
+        top: 440px;
+    }
+    .in_line2{
+        height: 5px;
+        width: 430px;
+        background-color: rgb(12,90,219);
+        position: absolute;
+        animation: in2 2s forwards;
+    }
+    @keyframes in2 {
+        from{
+            width: 300px;
+        }
+        to{
+            width: 430px;
+        }
+    }
+    .p92{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: -20px;
+        left: 300px;
+        animation: in3 2s forwards;
+    }
+    @keyframes in3 {
+        from{
+            width: 300px;
+        }
+        to{
+            width: 430px;
+        }
+    }
+    .p93{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: 480px;
+        left: 20px;
+    }
+    .liine3{
+        height: 5px;
+        width: 450px;
+        background-color: whitesmoke;
+        position: absolute;
+        left: 20px;
+        top: 510px;
+    }
+    .in_line3{
+        height: 5px;
+        width: 430px;
+        background-color: rgb(12,90,219);
+        position: absolute;
+        animation: in3 2s forwards;
+    }
+    @keyframes in3 {
+        from{
+            width: 150px;
+        }
+        to{
+            width: 320px;
+        }
+    }
+    .p94{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: -20px;
+        left: 150px;
+        animation: in4 2s forwards;
+    }
+    @keyframes in4 {
+        from{
+            width: 150px;
+        }
+        to{
+            width: 320px;
+        }
+    }
+    .main8{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(0,0,54);
+        position: relative;
+
+    }
+    .p96{
+        font-family: Muli, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: rgb(11,54,143);
+        position: absolute;
+        left: 150px;
+        top: 100px;
+        letter-spacing: 5px;
+    }
+    .p97{
+        font-family: Muli, sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 36px;
+        color: white;
+        position: absolute;
+        left: 150px;
+        top: 130px;
+    }
+    .lin6 {
+        height: 7px;
+        width: 120px;
+        background-color: skyblue;
+        position: absolute;
+        left: 150px;
+        top: 220px;
+        border-radius: 50px;
+    }
+
+    .cir7 {
+        height: 11px;
+        width: 11px;
+        background-color: royalblue;
+        border-radius: 50%;
+        position: absolute;
+        top: -2px;
+        animation: cir7 3s linear infinite;
+    }
+
+    @keyframes cir7 {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: 115px;
+        }
+    }
+    .see{
+        height: 50px;
+        width: 140px;
+        background-color: rgb(12, 90, 219);
+        border: none;
+        border-radius: 5px;
+        position: absolute;
+        left: 80%;
+        top: 20vh;
+        font-size: medium;
+        color: white;
+
+    }
+    .sub_main{
+        height: 350px;
+        width: 80%;
+        /* border: 1px solid white; */
+        position: relative;
+        left: 10%;
+        top: 300px;
+    }
+    .child14{
+        height: 350px;
+        width: 30%;
+        /* border: 2px solid yellowgreen; */
+        position: absolute;
+        transition: .5s;
+    }
+    .child14:hover{
+        box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.537);
+    }
+    #image12{
+        height: 250px;
+        width: 100%;
+        position: absolute;
+
+    }
+    .tik{
+        height: 98px;
+        width: 100%;
+        background-color: rgb(11,14,60);
+        position: absolute;
+        top: 250px;
+
+
+    }
+    .p98{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        /* border-right: 1px solid white; */
+    }
+    .p99{
+        font-family: Muli, sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 25.5px;
+        color: white;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+    .child15{
+        height: 350px;
+        width: 30%;
+        /* border: 2px solid yellowgreen; */
+        position: absolute;
+        left: 35%;
+        transition: .5s;
+    }
+    .child15:hover{
+        box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.55);
+    }
+    #image13{
+        height: 250px;
+        width: 100%;
+        position: absolute;
+
+    }
+    .tik1{
+        height: 98px;
+        width: 100%;
+        background-color: rgb(11,14,60);
+        position: absolute;
+        top: 250px;
+
+
+    }
+    .p100{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        /* border-right: 1px solid white; */
+    }
+    .p101{
+        font-family: Muli, sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 25.5px;
+        color: white;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+    .child16{
+        height: 350px;
+        width: 30%;
+        /* border: 2px solid yellowgreen; */
+        position: absolute;
+        left: 70%;
+        transition: .5s;
+    }
+    .child16:hover{
+        box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.53);
+    }
+    #image14{
+        height: 250px;
+        width: 100%;
+        position: absolute;
+
+    }
+    .tik2{
+        height: 98px;
+        width: 100%;
+        background-color: rgb(11,14,60);
+        position: absolute;
+        top: 250px;
+
+
+    }
+    .p102{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        /* border-right: 1px solid white; */
+    }
+    .p103{
+        font-family: Muli, sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 25.5px;
+        color: white;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+    .main9{
+        height: 40vh;
+        width: 100%;
+        background-color: rgb(12,90,219);
+        position: relative;
+    }
+    .p104{
+        font-family: Muli, sans-serif;
+        font-size: 31px;
+        font-weight: 700;
+        line-height: 40.5px;
+        color: white;
+        position: absolute;
+        left: 590px;
+        top: 40px;
+    }
+    .inp1{
+        height: 80px;
+        width: 600px;
+        background-color: white;
+        border-radius: 20px;
+        position: relative;
+        left: 30%;
+        top: 20vh;
+
+    }
+    .p105{
+        height: 40px;
+        width: 400px;
+        background-color: whitesmoke;
+        position: absolute;
+        left: 40px;
+        top: 20px;
+        font-size: large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+    .subb{
+        height: 50px;
+        width: 140px;
+        background-color: rgb(12,90,219);
+        border-radius: 20px;
+        position: absolute;
+        left: 450px;
+        top: 15px;
+        cursor: pointer;
+        border: none;
+        color: white;
+        font-size: medium;
+        font-weight: 500;
+        transition: .5s;
+    }
+    .subb:hover{
+        background-color: rgb(11,29,92);
+    }
+    .main10{
+        height: 80vh;
+        width: 100%;
+        background-color: rgb(17,26,58);
+        background-image: url(./footer-bg.png);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+    }
+    .sub_main1{
+        height: 55vh;
+        width: 80%;
+        border-bottom: 1px solid white;
+        position: relative;
+        left: 10%;
+        top: 10vh;
+
+    }
+    #image15{
+        height: 45px;
+        width: 175px;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+    .p106{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 30px;
+        top: 100px;
+    }
+    .p107{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 30px;
+        top: 215px;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .p107:hover{
+        color: blue;
+    }
+    .p108{
+        font-family: Muli, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 350px;
+        top: 40px;
+    }
+    .p109{
+        position: absolute;
+        left: 350px;
+        top: 100px;
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+
+    }
+    .p110{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 350px;
+        top: 130px;
+    }
+    .p111{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 350px;
+        top: 160px;
+
+    }
+    .p112{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 350px;
+        top: 190px;
+    }
+    .p113{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 350px;
+        top: 220px;
+    }
+    .p114{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 350px;
+        top: 250px;
+    }
+    .p115{
+        font-family: Muli, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 600px;
+        top: 40px;
+    }
+    .p116{
+        position: absolute;
+        left: 600px;
+        top: 100px;
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+    }
+    .p117{
+        position: absolute;
+        left: 600px;
+        top: 180px;
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: rgb(244, 246, 254);
+    }
+    .p118{
+        position: absolute;
+        left: 600px;
+        top: 240px;
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 36px;
+        color: rgb(244, 246, 254);
+    }
+    .p119{
+        font-family: Muli, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 890px;
+        top: 40px;
+    }
+    .pic{
+        height: 130px;
+        width: 250px;
+        border-bottom: 1px solid white;
+        position: relative;
+        left: 890px;
+        top: 100px;
+    }
+    #image16{
+        height: 80px;
+        width: 100px;
+        position: absolute;
+    }
+    .p120{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 22px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 120px;
+    }
+    .p121{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        left: 120px;
+        top: 70px;   
+    }
+    .pic1{
+        height: 130px;
+        width: 250px;
+        /* border-bottom: 1px solid white; */
+        position: relative;
+        left: 890px;
+        top: 120px;
+    }
+    #image17{
+        height: 80px;
+        width: 100px;
+        position: absolute;
+    }
+    .p122{
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 22px;
+        color: rgb(244, 246, 254);
+        position: absolute;
+        left: 120px;
+    }
+    .p123{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        left: 120px;
+        top: 50px;   
+    }
+    .p124{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        left: 180px;
+        top: 500px;   
+    }
+    .p125{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        left: 980px;
+        top: 500px; 
+        cursor: pointer;  
+    }
+    .p126{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        left: 1140px;
+        top: 500px;
+        cursor: pointer;   
+    }
+    .p127{
+        font-family: Muli, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.5px;
+        color: white;
+        position: absolute;
+        left: 1280px;
+        top: 500px;  
+        cursor: pointer; 
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="address">
+            <p class="p_1"><i class="fa-solid fa-envelope" style="font-size: 5px; color: red; margin-left: 50px;"></i>
+                example@gmail.com</p>
+            <p class="p_2">24/5, 1st Floor, Kurigram</p>
+            <p class="p_3">+ (1800) 456 7890</p>
+
+            <i class="fa-brands fa-facebook-f"
+                style="font-size: 20px; color: white; position: absolute; left: 1205px; top: 8px; cursor: pointer;"></i>
+            <i class="fa-brands fa-twitter"
+                style="font-size: 20px; color: white; position: absolute; left: 1250px; top: 8px; cursor: pointer;"></i>
+            <i class="fa-brands fa-linkedin-in"
+                style="font-size: 20px; color: white; position: absolute; left: 1305px; top: 8px; cursor: pointer;"></i>
+            <i class="fa-brands fa-pinterest"
+                style
+                ="font-size: 20px; color: white; position: absolute; left: 1360px; top: 8px; cursor: pointer;"></i>
+
+        </div>
+        <div class="menu">
+            <img src="./tr-logo.png" alt="" id="logo">
+            <div class="menubar">
+                <ul class="sett">
+                    <li class="elements">Home
+                     
+                        <div class="dropdown1">
+                            <div class="c1">
+                                <div class="l1"></div>
+                                <span class="e1">Homepage Main</span>
+                            </div>
+                            <div class="c2">
+                                <div class="inner_c2">
+                                    <div class="l2"></div>
+                                    <span class="e2">Added New Demo ></span>
+                                </div>
+                                <div class="part1">jsiojqso</div>
+                            </div>
+                            <div class="c3">
+                                <div class="l3"></div>
+                                <span class="e3">New Demo 2021 ></span>
+                            </div>
+                            <div class="c4">
+                                <div class="l4"></div>
+                                <span class="e4">Homepage Two</span>
+                            </div>
+                            <div class="c5">
+                                <div class="l5"></div>
+                                <span class="e5">Homepage Three</span>
+                            </div>
+                            <div class="c6">
+                                <div class="l6"></div>
+                                <span class="e6">Homepage Four</span>
+                            </div>
+                            <div class="c7">
+                                <div class="l7"></div>
+                                <span class="e7">Homepage Five</span>
+                            </div>
+                            <div class="c8">
+                                <div class="l8"></div>
+                                <span class="e8">Homepage Six</span>
+                            </div>
+                            <div class="c9">
+                                <div class="l9"></div>
+                                <span class="e9">Homepage Seven</span>
+                            </div>
+                            <div class="c10">
+                                <div class="l10"></div>
+                                <span class="e10">Homepage Eight</span>
+                            </div>
+                            <div class="c11">
+                                <div class="l11"></div>
+                                <span class="e11">Homepage Nine(Animate)</span>
+                            </div>
+                            <div class="c12">
+                                <div class="l12"></div>
+                                <span class="e12">Homepage Ten</span>
+                            </div>
+                            <div class="c13">
+                                <div class="l13"></div>
+                                <span class="e13">Landing Page One</span>
+                            </div>
+                            <div class="c14">
+                                <div class="l14"></div>
+                                <span class="e14">Landing Page Two</span>
+                            </div>
+                            <div class="c15">
+                                <div class="l15"></div>
+                                <span class="e15">Homepage IT Start Up</span>
+                            </div>
+                            <div class="c16">
+                                <div class="l16"></div>
+                                <span class="e16">Homepage IT Minimal</span>
+                            </div>
+                            <div class="c17">
+                                <div class="l17"></div>
+                                <span class="e17">Homepage Dark Version</span>
+                            </div>
+                            <div class="c18">
+                                <div class="l18"></div>
+                                <span class="e18">Homepage Eight</span>
+                            </div>
+
+                        </div>
+                         
+                     </li> 
+                    <li class="elements">Company</li>
+                    <li class="elements">Services</li>
+                    <li class="elements">IT SOLUTION</li>
+                    <li class="elements">Blog</li>
+                    <li class="elements">Contact</li>
+
+                </ul>
+            </div>
+
+            
+
+        </div>
+        <h1 class="h1">WELCOME TO TECHNO</h1>
+
+        <p class="p1">DIGITAL MARKETING</p>
+
+        <p class="p3">PROVIDE ALL IT SOLUTIONS</p>
+        <p class="p4">HOSTING SERVICES</p>
+
+        <p class="p5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br> tempor incididunt ut
+            laboret dolore magna aliqua. Ut en ad minim ullamco <br> laboris nisi ut aliquip.</p>
+
+        <button class="about">ABOUT US</button>
+        <button class="how">HOW IT WORK</button>
+
+    </div>
+    </div>
+    <div class="main1">
+        <div class="child1">
+            <div class="circle1">
+                <!-- <i class="fa-solid fa-chart-pie-simple"></i> -->
+                <i class="fa-brands fa-accusoft" style="font-size: 55px; margin-top: 40px; color: blue; "></i>
+            </div>
+            <p class="p6">Product Engineering</p>
+            <p class="p7">We have the expertise to help you <br> define a game plan, design the <br> products customers
+                want.</p>
+            <p class="p8">READ MORE ></p>
+        </div>
+        <div class="child2">
+            <div class="circle2">
+                <i class="fa-solid fa-cloud-arrow-up" style="font-size: 55px; margin-top: 40px; color: blue; "></i>
+            </div>
+            <p class="p9">Digital Services</p>
+            <p class="p10">We have the expertise to help you <br> define a game plan, design the <br> products customers
+                want.</p>
+            <p class="p11">READ MORE ></p>
+        </div>
+        <div class="child3">
+            <div class="circle3">
+                <i class="fa-solid fa-globe" style="font-size: 55px; margin-top: 40px; color: blue;"></i>
+            </div>
+            <p class="p12">IT CONSULTANCY</p>
+            <p class="p13">We have the expertise to help you <br> define a game plan, design the <br> products customers
+                want.</p>
+            <p class="p14">READ MORE ></p>
+        </div>
+        <img src="./about-img.png" alt="" id="image2">
+        <img src="./about-circle.png" alt="" id="image1">
+        <div class="text">
+            <p class="p15">30 YEARS EXPERIENCE</p>
+            <p class="p16">Preparing For Your Success <br> Provide Best <span class="solo">IT Solutions.</span></p>
+            <div class="lin">
+                <div class="cir"></div>
+            </div>
+            <p class="p17">We are privileged to work with hundred future-thinking awesome <br> businesses including many
+                of the world’s top hardware</p>
+            <i class="fa-solid fa-gear"
+                style="font-size: 40px; color: blue; position: absolute; top: 260px; left: 20px;"></i>
+            <p class="p18">Warranty Management</p>
+            <p class="p19">Morem Ipsum is simply dummy text of the printing and <br> pepesetting found.</p>
+            <i class="fa-solid fa-display"
+                style="font-size: 40px; color: blue; position: absolute; top: 380px; left: 20px;"></i>
+            <p class="p20">Quality Control System</p>
+            <p class="p21">Morem Ipsum is simply dummy text of the printing and <br> pepesetting found.</p>
+
+        </div>
+    </div>
+    <div class="main2">
+        <p class="p23">OUR SERVICES</p>
+        <p class="p24">We Run All Kinds Of IT Services <br> With 20 Years Of Experience</p>
+        <div class="line">
+            <div class="cir1"></div>
+        </div>
+        <div class="child4">
+            <i class="fa-solid fa-gear"
+                style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i>
+            <p class="p25">Digital Services</p>
+            <p class="p26">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <p class="p27">Read More ></p>
+        </div>
+        <div class="child5">
+            <i class="fa-solid fa-lightbulb"
+                style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i>
+            <p class="p28">Product Development</p>
+            <p class="p29">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <p class="p30">Read More ></p>
+        </div>
+        <div class="child6">
+            <i class="fa-solid fa-address-card"
+                style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i>
+            <!-- <i class="fa-solid fa-lightbulb" style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i> -->
+            <p class="p31">Content Engineering</p>
+            <p class="p32">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <p class="p33">Read More ></p>
+        </div>
+        <div class="child7">
+            <i class="fa-solid fa-pencil"
+                style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i>
+            <!-- <i class="fa-solid fa-lightbulb" style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i> -->
+            <p class="p34">Experienced Design</p>
+            <p class="p35">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <p class="p36">Read More ></p>
+        </div>
+        <div class="child8">
+            <i class="fa-brands fa-rocketchat"
+                style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i>
+            <p class="p37">Advisory Services</p>
+            <p class="p38">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <p class="p39">Read More ></p>
+        </div>
+        <div class="child9">
+            <i class="fa-solid fa-cloud"
+                style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i>
+            <!-- <i class="fa-solid fa-lightbulb" style="font-size: 60px; color: white; position: absolute; top: 20px; left: 20px;"></i> -->
+            <p class="p40">Data Structuring</p>
+            <p class="p41">Digital solutions have transformed the <br> world’s customer expectations and the <br>
+                profitable growths.</p>
+            <p class="p42">Read More ></p>
+        </div>
+
+        <div class="long">
+            <p class="p43">15K</p>
+            <p class="p44">Happy Client</p>
+            <div class="line1"></div>
+
+            <p class="p45">1280+</p>
+            <p class="p46">Account Number</p>
+            <div class="line2"></div>
+
+            <p class="p47">10K</p>
+            <p class="p48">Finished Project</p>
+            <div class="line3"></div>
+
+            <p class="p49">992+</p>
+            <p class="p50">Win Awards</p>
+        </div>
+
+    </div>
+    <div class="main3">
+        <p class="p51"> Team Member</p>
+        <p class="p52">Our Awesome Creative <br> Team Member</p>
+        <div class="lin1">
+            <div class="cir2"></div>
+        </div>
+        <button class="join">Join Our Team</button>
+        <img src="./about-circle.png" alt="" id="image7">
+        <div class="child10">
+            <div class="child">
+                <img src="./team4.jpg" alt="" id="image3">
+                <div class="chil"></div>
+                <div class="chi">
+                    <i class="fa-brands fa-facebook-f"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 15px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-twitter"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top:65px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-linkedin-in"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 115px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-pinterest"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 160px; cursor: pointer;"></i>
+                </div>
+            </div>
+            <div class="ch">
+                <p class="p53">David Malaan</p>
+                <p class="p54">CEO</p>
+            </div>
+        </div>
+        <div class="child11">
+            <div class="child111">
+                <img src="./team5.jpg" alt="" id="image4">
+                <div class="chil1"></div>
+                <div class="chi1">
+                    <i class="fa-brands fa-facebook-f"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 15px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-twitter"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top:65px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-linkedin-in"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 115px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-pinterest"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 160px; cursor: pointer;"></i>
+                </div>
+            </div>
+            <div class="ch1">
+                <p class="p55">Andres Jhohne</p>
+                <p class="p56">DIRECTOR</p>
+            </div>
+        </div>
+        <div class="child12">
+            <div class="child222">
+                <img src="./team6.jpg" alt="" id="image5">
+                <div class="chil2"></div>
+                <div class="chi2">
+                    <i class="fa-brands fa-facebook-f"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 15px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-twitter"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top:65px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-linkedin-in"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 115px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-pinterest"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 160px; cursor: pointer;"></i>
+                </div>
+            </div>
+            <div class="ch2">
+                <p class="p57">Michel Balak</p>
+                <p class="p58">FOUNDER</p>
+            </div>
+        </div>
+        <div class="child13">
+            <div class="child333">
+                <img src="./team7.jpg" alt="" id="image6">
+                <div class="chil3"></div>
+                <div class="chi3">
+                    <i class="fa-brands fa-facebook-f"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 15px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-twitter"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top:65px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-linkedin-in"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 115px; cursor: pointer;"></i>
+                    <i class="fa-brands fa-pinterest"
+                        style="font-size: 20px; color: blue; position: absolute; left: 15px; top: 160px; cursor: pointer;"></i>
+                </div>
+            </div>
+            <div class="ch3">
+                <p class="p59">Michel Balak</p>
+                <p class="p60">MANAGER</p>
+            </div>
+        </div>
+    </div>
+    <div class="main4">
+        <div class="p61">CASE STUDIES</div>
+        <p class="p62">Some of Our Case Studies</p>
+        <div class="lin2">
+            <div class="cir3"></div>
+        </div>
+        <div class="ib1">
+            <div class="b1">
+                <div class="div1">Solution For Financial</div>
+            </div>
+        </div>
+        <div class="ib2">
+            <div class="b2">
+                <div class="div2">Solution For Financial</div>
+            </div>
+        </div>
+        <div class="ib3">
+            <div class="b3">
+                <div class="div3">Solution For Financial</div>
+            </div>
+        </div>
+        <div class="ib4">
+            <div class="b4">
+                <div class="div4">Solution For Financial</div>
+            </div>
+            </div>
+    </div>
+   <div class="main5">
+        <p class="p64">PROCESS</p>
+        <p class="p65">Our Working Process</p>
+        <div class="lin3">
+            <div class="cir4"></div>
+        </div>
+        <div class="ccchhh">
+            <p class="p67">Select A Project</p>
+            <p class="p68">We have the technology and industry  <br> expertise to develop solutions that can <br> connect people and businesses across <br> variety of mobile devices.</p>
+            <div class="circle_1">
+                <div class="circle_11">
+                    <div class="circle_111"><p class="p66">1</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="ccchhh1">
+            <p class="p70">Project Analysis</p>
+            <p class="p71">We have the technology and industry  <br> expertise to develop solutions that can <br> connect people and businesses across <br> variety of mobile devices.</p>
+            <div class="circle_2">
+                <div class="circle_22">
+                    <div class="circle_222"><p class="p69">2</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="dots">------------------------</div>
+        <div class="dots1">------------------------</div>
+        <div class="ccchhh2">
+            <p class="p73">Deliver Result</p>
+            <p class="p74">We have the technology and industry  <br> expertise to develop solutions that can <br> connect people and businesses across <br> variety of mobile devices.</p>
+            <div class="circle_3">
+                <div class="circle_33">
+                    <div class="circle_333"><p class="p72">3</p></div>
+                </div>
+            </div>
+        </div>
+        
+   </div>
+   <div class="main6">
+        <p class="p75">TESTIMONIAL</p>
+        <p class="p76">What Says <br> Our Happy Clients</p>
+        <div class="lin4">
+            <div class="cir5"></div>
+        </div>
+        <div class="clip1">
+            <p class="p77">Sorem ipsum dolor sit amet there <br> any consectetur adipisicing eliter <br> sed do the eiusmod tempor asem <br> incididunt ut labore dolore magna <br> aliqua. Ut enim adern minim</p>
+        </div>
+        <div class="clip2">
+            <p class="p78">Sorem ipsum dolor sit amet there <br> any consectetur adipisicing eliter <br> sed do the eiusmod tempor asem <br> incididunt ut labore dolore magna <br> aliqua. Ut enim adern minim</p>
+        </div>
+        <div class="clip3">
+            <p class="p79">Sorem ipsum dolor sit amet there <br> any consectetur adipisicing eliter <br> sed do the eiusmod tempor asem <br> incididunt ut labore dolore magna <br> aliqua. Ut enim adern minim</p>
+        </div>
+        <div class="logo1">
+            <img src="./testi3.jpg" alt="" id="image8">
+        </div>
+        <p class="p80">Abrahum Jhone</p>
+        <p class="p81">IT MANAGER</p>
+
+        <img src="./testi1.jpg" alt="" id="image9">
+        <p class="p82">Jamal Vuiyan</p>
+        <p class="p83">FOUNDER</p>
+
+        <img src="./testi2.jpg" alt="" id="image10">
+        <p class="p84">Fatima Jahra</p>
+        <p class="p85">DEVELOPER</p>
+   </div>
+   <div class="main7">
+        <img src="./video-img3.png" alt="" id="image11">
+        <div class="text1">
+            <p class="p86">OUR EXPERIENCE</p>
+            <p class="p87">Stay Up, Stay Running <br> & Protected </p>
+            <div class="lin5">
+                <div class="cir6"></div>
+            </div>
+            <p class="p88">High-tech industries play an important role in the modern <br> economy, and often experience significantly higher pay than <br> other industries. And Digital solutions</p>
+            <p class="p89">Web Development</p>
+            <div class="liine1">
+                <div class="in_line1">
+                    <p class="p90">90%</p>
+
+
+                </div>
+            </div>
+            <p class="p91">Web Design</p>
+            <div class="liine2">
+                <div class="in_line2">
+                    <p class="p92">96%</p>
+
+
+                </div>
+            </div>
+            <p class="p93">Digital Marketing</p>
+            <div class="liine3">
+                <div class="in_line3">
+                    <p class="p94">70%</p>
+
+
+                </div>
+            </div>
+        </div>
+   </div>
+   <div class="main8">
+    <p class="p96">LATEST ARTICAL</p>
+    <p class="p97">See Our Latest <br> Blog Posts</p>
+    <div class="lin6">
+        <div class="cir7"></div>
+    </div>
+    <button class="see">See All Blogs</button>
+    <div class="sub_main">
+        <div class="child14">
+            <img src="./blog-2-390x290.jpg" alt="" id="image12">
+            <div class="tik">
+                <p class="p98">Techno  |  December 4, 2018</p>
+                <p class="p99">Tiktok illegally collecting <br> data sharing</p>
+            </div>
+        </div>
+        <div class="child15">
+            <img src="./blog1-390x290.jpg" alt="" id="image13">
+            <div class="tik1">
+                <p class="p100">Techno  |  December 4, 2018</p>
+                <p class="p101">How can use our latest news <br> by techno</p>
+            </div>
+        </div>
+        <div class="child16">
+            <img src="./blog01-390x290.jpg" alt="" id="image14">
+            <div class="tik2">
+                <p class="p102">Techno  |  December 4, 2018</p>
+                <p class="p103">How can use our latest news <br> by techno</p>
+            </div>
+        </div>
+
+    </div>
+   </div>
+   <div class="main9">
+        <p class="p104">Subscribe Our Newsletter</p>
+        <div class="inp1">
+            <textarea class="p105" name="osk" id="" cols="30" rows="10" placeholder="Enter Your Email*"></textarea>
+            <button class="subb">Subscribe</button>
+        </div>
+   </div>
+   <div class="main10">
+        <div class="sub_main1">
+            <img src="./tr-logo.png" alt="" id="image15">
+            <p class="p106">Condimentum rhoncus, sem quam <br> semper libero, sit amet adipiscing <br> sem neque sed ipsum. Nam quam <br> nunc, blandit vel, luctus.</p>
+            <p class="p107">Follow Us</p>
+
+            <i class="fa-brands fa-facebook-f"
+            style="font-size: 15px; color: white; position: absolute; left: 115px; top: 220px; cursor: pointer;"></i>
+            <i class="fa-brands fa-twitter"
+            style="font-size: 15px; color: white; position: absolute; left: 145px; top: 220px; cursor: pointer;"></i>
+            <i class="fa-brands fa-linkedin-in"
+            style="font-size: 15px; color: white; position: absolute; left: 175px; top: 220px; cursor: pointer;"></i>
+            <i class="fa-brands fa-pinterest"
+            style="font-size: 15px; color: white; position: absolute; left: 205px; top: 220px; cursor: pointer;"></i>
+
+            <p class="p108">Our Services</p>
+            
+            <p class="p109">Marketing Stretigies</li>
+            <p class="p110">Interior Design</li>
+            <p class="p111">Digital Services</li>
+            <p class="p112">Product Selling</li>
+            <p class="p113">Product Design</li>
+            <p class="p114">Social Marketing</li>
+            
+            <p class="p115">Company Address</p>
+            <p class="p116">Porem awesome dolor sitework <br> amet, consetur acing elit, sed do <br> eiusmod ligal</p>
+            <p class="p117">Address: 54/1 New dhas sorini <br> Asut, Melbord Austria.</p>
+            <p class="p118">Phone: 54786547521 <br>
+
+                Email:demo@example.com</p>
+            <p class="p119">Popular Posts</p>
+            <div class="pic">
+                <img src="./blog-2-390x290.jpg" alt="" id="image16">
+                <p class="p120">Tiktok Illegally <br> collecting data <br> sharing</p>
+                <p class="p121">December 4, 2018</p>
+            </div>
+            <div class="pic1">
+                <img src="./blog-2-390x290.jpg" alt="" id="image17">
+                <p class="p122">How can use our <br> latest news by</p>
+                <p class="p123">December 4, 2018</p>
+            </div>
+        </div>
+        <p class="p124">Copyright © techno all rights reserved.</p>
+        <p class="p125">Terms & Condition</p>
+        <p class="p126">Privacy Policy</p>
+        <p class="p127">Contact Us</p>
+ 
+
+ 
+
+   </div>
+
+    </body>
+
+</html>
